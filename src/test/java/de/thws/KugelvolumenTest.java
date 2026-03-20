@@ -1,0 +1,23 @@
+package de.thws;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class KugelvolumenTest {
+
+    @Test
+    public void testBerechneKugelvolumen(){
+        assertEquals(0.0, Kugelvolumen.berechneKugelvolumen(0),0.000001);
+        assertEquals(4.188790, Kugelvolumen.berechneKugelvolumen(1),0.000001);
+        assertEquals(523.598775598, Kugelvolumen.berechneKugelvolumen(5),0.000001);
+        try {
+            Kugelvolumen.berechneKugelvolumen(-1);
+            fail("RuntimeException erwartet");
+        }
+        catch(RuntimeException e) {
+            String fehler = e.getMessage();
+            assertEquals("nix negatives", fehler);
+        }
+
+    }
+
+}
