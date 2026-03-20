@@ -1,4 +1,4 @@
-package de.thws;
+package de.thws.lektion14;
 
 public class Punkt {
     int x;
