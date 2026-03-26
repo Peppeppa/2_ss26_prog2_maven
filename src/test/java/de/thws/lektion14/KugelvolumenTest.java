@@ -15,6 +15,7 @@ public class KugelvolumenTest {
         }
         catch(RuntimeException e) {
             String fehler = e.getMessage();
+            //assertThrows()
             assertEquals("nix negatives", fehler);
         }
 

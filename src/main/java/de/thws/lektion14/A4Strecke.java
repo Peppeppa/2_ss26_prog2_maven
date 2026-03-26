@@ -30,7 +30,6 @@ public class A4Strecke {
             result += "-";
         }
 
-
         return result + b;
     }
 }

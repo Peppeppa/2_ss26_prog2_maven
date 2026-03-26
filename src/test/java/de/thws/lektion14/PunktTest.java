@@ -11,7 +11,14 @@ public class PunktTest {
         assertEquals(1,test1.x);
         assertEquals(2,test1.y);
         try{
-            test1.verschiebePunkt(-1,-2);
+            test1.verschiebePunkt(-1,2);
+            fail("RuntimeException erwartet");
+        } catch (RuntimeException e){
+            String fehler = e.getMessage();
+            assertEquals("ungueltig", fehler);
+        }
+        try{
+            test1.verschiebePunkt(1,-2);
             fail("RuntimeException erwartet");
         } catch (RuntimeException e){
             String fehler = e.getMessage();
@@ -25,7 +32,7 @@ public class PunktTest {
             assertEquals("ungueltig", fehler);
         }
         try{
-            test1.verschiebePunkt(5,1081);
+            test1.verschiebePunkt(2,1081);
             fail("RuntimeException erwartet");
         } catch (RuntimeException e){
             String fehler = e.getMessage();
