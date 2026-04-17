@@ -8,7 +8,7 @@ public class RoboterImpl extends Entitaet implements Roboter{
             case GEFAHR_LINKS -> Entscheidung.RECHTS;
             case GEFAHR_RECHTS -> Entscheidung.LINKS;
             case GEFAHR_VORNE -> Entscheidung.BREMSEN;
-            case null -> Entscheidung.BREMSEN;
+            default -> Entscheidung.BREMSEN;
         };
     }
 
