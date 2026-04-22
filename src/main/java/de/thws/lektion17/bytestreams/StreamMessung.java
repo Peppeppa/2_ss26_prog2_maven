@@ -75,9 +75,9 @@ public class StreamMessung {
         long startZeit;
         long endZeit;
 
-        try {
+        try (
             FileInputStream in = new FileInputStream(quelle);
-            FileOutputStream out = new FileOutputStream(ziel);
+            FileOutputStream out = new FileOutputStream(ziel);){
 
             startZeit = System.currentTimeMillis();
 
@@ -89,8 +89,7 @@ public class StreamMessung {
 
             endZeit = System.currentTimeMillis();
 
-            in.close();
-            out.close();
+
             return endZeit-startZeit;
 
         } catch (FileNotFoundException e) {
@@ -105,11 +104,11 @@ public class StreamMessung {
         long startZeit;
         long endZeit;
 
-        try {
+        try (
             FileInputStream fis = new FileInputStream(quelle);
             FileOutputStream fos = new FileOutputStream(ziel);
             BufferedInputStream in = new BufferedInputStream(fis);
-            BufferedOutputStream out = new BufferedOutputStream(fos);
+            BufferedOutputStream out = new BufferedOutputStream(fos);){
 
             startZeit = System.currentTimeMillis();
 
@@ -118,11 +117,11 @@ public class StreamMessung {
                 out.write(b);
             }
 
-            out.flush();
+
             endZeit = System.currentTimeMillis();
 
-            in.close();
-            out.close();
+
+
 
             return endZeit - startZeit;
 
@@ -139,9 +138,9 @@ public class StreamMessung {
         long startZeit;
         long endZeit;
 
-        try {
+        try (
             FileInputStream in = new FileInputStream(quelle);
-            FileOutputStream out = new FileOutputStream(ziel);
+            FileOutputStream out = new FileOutputStream(ziel);){
 
             byte[] buffer = new byte[1024];
 
@@ -153,9 +152,6 @@ public class StreamMessung {
             }
 
             endZeit = System.nanoTime();
-
-            in.close();
-            out.close();
 
             return endZeit - startZeit;
 

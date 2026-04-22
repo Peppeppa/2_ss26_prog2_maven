@@ -1,4 +1,4 @@
-package de.thws.lektion17.bytestreams;
+package de.thws.lektion17.StreamVerdopplung;
 
 import java.io.IOException;
 import java.io.OutputStream;
