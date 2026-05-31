@@ -15,8 +15,6 @@ public class MainDictionary {
         dictionary.put("to expand", "vergrößern");
         dictionary.put("to expand", "wachsen");
 
-        // Doppelter Eintrag zum Testen:
-        // Wird nicht doppelt gespeichert, weil intern ein Set benutzt wird.
         dictionary.put("to clean", "putzen");
 
         Set<String> cleanTranslations = dictionary.get("to clean");

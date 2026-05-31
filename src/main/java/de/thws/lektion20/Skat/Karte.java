@@ -113,10 +113,4 @@ public class Karte implements Spielkarte, Comparable<Karte>{
         Karte andereKArte = (Karte) obj;
         return this.getFarbe().equals(andereKArte.getFarbe()) && this.getWert().equals(andereKArte.getWert());
     }
-
-    @Override
-    public int hashCode(){
-        return Objects.hash(farbe, wert);
-    }
-
 }
