@@ -42,6 +42,11 @@ public class BBruder {
                 .ifPresent(System.out::println);
 
 
+
+
+
+
+
         bBrothers.stream()
                 .reduce((b1, b2) -> new BBruder(
                         "durchschnittsbankdrücker",
@@ -62,6 +67,8 @@ public class BBruder {
                 .reduce(0, (g1, g2) -> g1 + g2);
 
         System.out.println(summe / (double) bBrothers.size());
+
+
 
 
         int summe2 = bBrothers.stream()
