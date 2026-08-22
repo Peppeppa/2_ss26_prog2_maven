@@ -21,6 +21,5 @@ public class Bild implements DokumentElement {
     @Override
     public void accept(MarkdownVisitor visitor) {
         // TODO
-        visitor.visit(this);
     }
 }

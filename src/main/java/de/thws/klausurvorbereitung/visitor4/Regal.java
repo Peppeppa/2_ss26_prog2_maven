@@ -1,5 +1,7 @@
 package de.thws.klausurvorbereitung.visitor4;
 
+import de.thws.lektion15.ueb1.Ueb2Main;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,5 +32,4 @@ public class Regal implements BibliothekElement {
         for (BibliothekElement element : elemente){
             element.accept(visitor);
         }
-    }
-}
+    }}

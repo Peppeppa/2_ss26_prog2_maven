@@ -15,6 +15,5 @@ public class TextAbschnitt implements DokumentElement {
     @Override
     public void accept(MarkdownVisitor visitor) {
         // TODO
-        visitor.visit(this);
     }
 }

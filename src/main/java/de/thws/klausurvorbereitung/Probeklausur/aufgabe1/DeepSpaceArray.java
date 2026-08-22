@@ -9,7 +9,7 @@ public class DeepSpaceArray extends RadioTelescope implements SpecialCalibration
 
     }
     public double observationPerformance(){
-        return super()+3*linkedAntennas;
+        return super.observationPerformance()+3*linkedAntennas;
     }
     public double calibrationValue(){
 

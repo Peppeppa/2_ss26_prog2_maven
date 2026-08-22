@@ -27,9 +27,5 @@ public class Kapitel implements DokumentElement {
     @Override
     public void accept(MarkdownVisitor visitor) {
         // TODO
-        visitor.visit(this);
-        for (DokumentElement de:elemente){
-            de.accept(visitor);
-        }
     }
 }

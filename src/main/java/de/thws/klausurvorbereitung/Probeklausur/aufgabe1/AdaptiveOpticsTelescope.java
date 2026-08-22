@@ -9,7 +9,7 @@ public class AdaptiveOpticsTelescope extends OpticalTelescope implements Special
         this.adaptiveMirrors = mirrors;
     }
     public double observationPerformance(){
-        return super()+2*adaptiveMirrors;
+        return super.observationPerformance()+2*adaptiveMirrors;
     }
     public double calibrationValue(){
 
